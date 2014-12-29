@@ -1,0 +1,117 @@
+<div data-role="content">
+	<div class="ui-grid-a">
+		<div class="ui-block-a">
+			<fieldset>
+				<div data-role="fieldcontain">
+					<label for="XbandOn">X band</label>
+					<input data-role="flipswitch" id="XbandOn" type="checkbox" <% if (config.XbandOn === true) { %> checked="true" <% } %>>
+				</div>
+			</fieldset>
+		</div>
+		<div class="ui-block-b">
+			<fieldset>
+				<div data-role="fieldcontain">
+					<label for="KbandOn">K band</label>
+					<input data-role="flipswitch" id="KbandOn" type="checkbox" <% if (config.KbandOn === true) { %> checked="true" <% } %>>
+				</div>
+			</fieldset>		
+		</div>
+	</div>	
+	<div class="ui-grid-a">
+		<div class="ui-block-a">
+			<fieldset>
+				<div data-role="fieldcontain">
+					<label for="KAbandOn">KA band</label>
+					<input data-role="flipswitch" id="KAbandOn" type="checkbox" <% if (config.KAbandOn === true) { %> checked="true" <% } %>>
+				</div>
+			</fieldset>		
+		</div>
+		<div class="ui-block-b">
+			<fieldset>
+				<div data-role="fieldcontain">
+					<label for="KUBandOn">KU band</label>
+					<input data-role="flipswitch" id="KUBandOn" type="checkbox" <% if (config.KUBandOn === true) { %> checked="true" <% } %>>
+				</div>
+			</fieldset>		
+		</div>
+	</div>	
+	
+	<div class="ui-grid-a">
+		<div class="ui-block-a">
+			<fieldset>
+				<div data-role="fieldcontain">
+					<label for="LaserOn">Laser</label>
+					<input data-role="flipswitch" id="LaserOn" type="checkbox" <% if (config.LaserOn === true) { %> checked="true" <% } %>>
+				</div>
+			</fieldset>		
+		</div>
+		<div class="ui-block-b">
+			<fieldset>
+				<div data-role="fieldcontain">
+					<label for="KAFalseGuardOn">KA False Guard</label>
+					<input data-role="flipswitch" id="KAFalseGuardOn" type="checkbox" <% if (config.KAFalseGuardOn === true) { %> checked="true" <% } %>>
+				</div>
+			</fieldset>		
+		</div>
+	</div>	
+	
+	
+	<div class="ui-grid-a">
+		<div class="ui-block-a">
+			<fieldset>
+				<div data-role="fieldcontain">
+					<label for="KMutingOn">K Muting</label>
+					<input data-role="flipswitch" id="KMutingOn" type="checkbox" <% if (config.KMutingOn === true) { %> checked="true" <% } %>>
+				</div>
+			</fieldset>		
+		</div>
+		<div class="ui-block-b">
+			<fieldset>
+				<div data-role="fieldcontain">
+					<label for="KRearMuteOn">K Rear Mute</label>
+					<input data-role="flipswitch" id="KRearMuteOn" type="checkbox" <% if (config.KRearMuteOn === true) { %> checked="true" <% } %>>
+				</div>
+			</fieldset>		
+		</div>
+	</div>	
+	
+	<div class="ui-grid-a">
+		<div class="ui-block-a">
+			<fieldset>
+				<div data-role="fieldcontain">
+					<label for="PopOn">Pop On</label>
+					<input data-role="flipswitch" id="PopOn" type="checkbox" <% if (config.PopOn === true) { %> checked="true" <% } %>>
+				</div>
+			</fieldset>		
+		</div>
+		<div class="ui-block-b">
+			<fieldset>
+				<div data-role="fieldcontain">
+					<label for="EuroOn">Euro On</label>
+					<input data-role="flipswitch" id="EuroOn" type="checkbox" <% if (config.EuroOn === true) { %> checked="true" <% } %>>
+				</div>
+			</fieldset>		
+		</div>
+	</div>	
+	
+	<div class="ui-grid-a">
+		<div class="ui-block-a">
+			<fieldset>
+				<div data-role="fieldcontain">
+					<label for="EuroXBandOn">Euro X Band On</label>
+					<input data-role="flipswitch" id="EuroXBandOn" type="checkbox" <% if (config.EuroXBandOn === true) { %> checked="true" <% } %>>
+				</div>
+			</fieldset>		
+		</div>
+		<div class="ui-block-b">
+			<fieldset>
+				<div data-role="fieldcontain">
+					<label for="FilterOn">Filter On</label>
+					<input data-role="flipswitch" id="FilterOn" type="checkbox" <% if (config.FilterOn === true) { %> checked="true" <% } %>>
+				</div>
+			</fieldset>		
+		</div>
+	</div>	
+	
+	<button id="save" class="ui-btn ui-btn-inline ui-corner-all">Save</button>
+</div>

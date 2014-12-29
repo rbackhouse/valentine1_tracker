@@ -1,0 +1,651 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>PacketAction Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">ESPLibrary </a></h1>
+				<a id="developerHome" href="../index.html">Valentine Research</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">PacketAction Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/AO">&nbsp;&nbsp;&nbsp;&nbsp;AO</option>
+	
+	<option value="//api/name/AlertOutDelegate">&nbsp;&nbsp;&nbsp;&nbsp;AlertOutDelegate</option>
+	
+	<option value="//api/name/CS">&nbsp;&nbsp;&nbsp;&nbsp;CS</option>
+	
+	<option value="//api/name/CustomSweepDelegate">&nbsp;&nbsp;&nbsp;&nbsp;CustomSweepDelegate</option>
+	
+	<option value="//api/name/DA">&nbsp;&nbsp;&nbsp;&nbsp;DA</option>
+	
+	<option value="//api/name/DI">&nbsp;&nbsp;&nbsp;&nbsp;DI</option>
+	
+	<option value="//api/name/DeviceInformationDelegate">&nbsp;&nbsp;&nbsp;&nbsp;DeviceInformationDelegate</option>
+	
+	<option value="//api/name/InfoDisplayDelegate">&nbsp;&nbsp;&nbsp;&nbsp;InfoDisplayDelegate</option>
+	
+	<option value="//api/name/MS">&nbsp;&nbsp;&nbsp;&nbsp;MS</option>
+	
+	<option value="//api/name/MiscellaneousPacketDelegate">&nbsp;&nbsp;&nbsp;&nbsp;MiscellaneousPacketDelegate</option>
+	
+	<option value="//api/name/SS">&nbsp;&nbsp;&nbsp;&nbsp;SS</option>
+	
+	<option value="//api/name/SavvyDelegate">&nbsp;&nbsp;&nbsp;&nbsp;SavvyDelegate</option>
+	
+	<option value="//api/name/USO">&nbsp;&nbsp;&nbsp;&nbsp;USO</option>
+	
+	<option value="//api/name/UserSetupOptionsDelegate">&nbsp;&nbsp;&nbsp;&nbsp;UserSetupOptionsDelegate</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/sharedInstance">&nbsp;&nbsp;&nbsp;&nbsp;+ sharedInstance</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/actOnReceivedPacket:">&nbsp;&nbsp;&nbsp;&nbsp;- actOnReceivedPacket:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/AO">AO</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/AlertOutDelegate">AlertOutDelegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/CS">CS</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/CustomSweepDelegate">CustomSweepDelegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/DA">DA</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/DI">DI</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/DeviceInformationDelegate">DeviceInformationDelegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/InfoDisplayDelegate">InfoDisplayDelegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/MS">MS</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/MiscellaneousPacketDelegate">MiscellaneousPacketDelegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/SS">SS</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/SavvyDelegate">SavvyDelegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/USO">USO</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/UserSetupOptionsDelegate">UserSetupOptionsDelegate</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sharedInstance">sharedInstance</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/actOnReceivedPacket:">actOnReceivedPacket:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="PacketAction Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">PacketAction Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">PacketAction.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>This class is designed to allow you to interact with the Valentine One hardware. It handles the routing of recieved packets to their appropriate classes for processing.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/AO">&nbsp;&nbsp;AO</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/DA">&nbsp;&nbsp;DA</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/MS">&nbsp;&nbsp;MS</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/SS">&nbsp;&nbsp;SS</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/USO">&nbsp;&nbsp;USO</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/CS">&nbsp;&nbsp;CS</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/DI">&nbsp;&nbsp;DI</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/AlertOutDelegate">&nbsp;&nbsp;AlertOutDelegate</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/InfoDisplayDelegate">&nbsp;&nbsp;InfoDisplayDelegate</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/SavvyDelegate">&nbsp;&nbsp;SavvyDelegate</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/UserSetupOptionsDelegate">&nbsp;&nbsp;UserSetupOptionsDelegate</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/CustomSweepDelegate">&nbsp;&nbsp;CustomSweepDelegate</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/MiscellaneousPacketDelegate">&nbsp;&nbsp;MiscellaneousPacketDelegate</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/DeviceInformationDelegate">&nbsp;&nbsp;DeviceInformationDelegate</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sharedInstance">+&nbsp;sharedInstance</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/actOnReceivedPacket:">&ndash;&nbsp;actOnReceivedPacket:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/AO" title="AO"></a>
+	<h3 class="subsubtitle method-title">AO</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) AlertOutput *AO</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/AlertOutDelegate" title="AlertOutDelegate"></a>
+	<h3 class="subsubtitle method-title">AlertOutDelegate</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;AlertOutProtocol&gt; AlertOutDelegate</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/CS" title="CS"></a>
+	<h3 class="subsubtitle method-title">CS</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) CustomSweep *CS</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/CustomSweepDelegate" title="CustomSweepDelegate"></a>
+	<h3 class="subsubtitle method-title">CustomSweepDelegate</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;CustomSweepProtocol&gt; CustomSweepDelegate</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/DA" title="DA"></a>
+	<h3 class="subsubtitle method-title">DA</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) DisplayAndAudio *DA</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/DI" title="DI"></a>
+	<h3 class="subsubtitle method-title">DI</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) DeviceInformation *DI</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/DeviceInformationDelegate" title="DeviceInformationDelegate"></a>
+	<h3 class="subsubtitle method-title">DeviceInformationDelegate</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;DeviceInformationProtocol&gt; DeviceInformationDelegate</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/InfoDisplayDelegate" title="InfoDisplayDelegate"></a>
+	<h3 class="subsubtitle method-title">InfoDisplayDelegate</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;InfoDisplayProtocol&gt; InfoDisplayDelegate</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/MS" title="MS"></a>
+	<h3 class="subsubtitle method-title">MS</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) Miscellaneous *MS</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/MiscellaneousPacketDelegate" title="MiscellaneousPacketDelegate"></a>
+	<h3 class="subsubtitle method-title">MiscellaneousPacketDelegate</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;MiscellaneousPacketProtocol&gt; MiscellaneousPacketDelegate</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/SS" title="SS"></a>
+	<h3 class="subsubtitle method-title">SS</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) SavvySpecific *SS</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/SavvyDelegate" title="SavvyDelegate"></a>
+	<h3 class="subsubtitle method-title">SavvyDelegate</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;SavvyProtocol&gt; SavvyDelegate</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/USO" title="USO"></a>
+	<h3 class="subsubtitle method-title">USO</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) UserSetupOptions *USO</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/UserSetupOptionsDelegate" title="UserSetupOptionsDelegate"></a>
+	<h3 class="subsubtitle method-title">UserSetupOptionsDelegate</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;UserSetupOptionsProtocol&gt; UserSetupOptionsDelegate</code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/sharedInstance" title="sharedInstance"></a>
+	<h3 class="subsubtitle method-title">sharedInstance</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This returns the signleton instance that should be used to set the delegates for the Packet Action classes.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (PacketAction *)sharedInstance</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This returns the signleton instance that should be used to set the delegates for the Packet Action classes.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PacketAction.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/actOnReceivedPacket:" title="actOnReceivedPacket:"></a>
+	<h3 class="subsubtitle method-title">actOnReceivedPacket:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)actOnReceivedPacket:(ESPPacket *)<em>currentPacket</em></code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Valentine Research. All rights reserved. (Last updated: 2013-12-13)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

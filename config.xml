@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="org.potpie.valentine1.tracker" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>V1 Tracker</name>
+    <description>
+    </description>
+    <author email="richardabackhouse@gmail.com" href="http://rbackhouse.org">
+        Richard Backhouse
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
+</widget>

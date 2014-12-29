@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    id="org.potpie.valentine1.v1plugin"
+    version="1.0.0">
+
+    <name>Valentine1Plugin</name>
+
+    <engines>
+        <engine name="cordova" version=">=3.2.0" />
+    </engines>
+
+    <js-module src="www/Valentine1Plugin.js" name="Valentine1Plugin">
+        <clobbers target="window.valentine1" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Valentine1Plugin">
+                <param name="ios-package" value="Valentine1Plugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+		<config-file target="*-Info.plist" parent="UIBackgroundModes">
+			<array>
+				<string>bluetooth-central</string>
+			</array>
+		</config-file>        
+		
+		<header-file src="src/ios/Valentine1Plugin.h" />
+        <source-file src="src/ios/Valentine1Plugin.m" />
+
+        <source-file src="src/ios/ESPLibrary/Library/libESPLibrary_1_1.a" framework="true"/>
+
+        <header-file src="src/ios/ESPLibrary/Library/Include/AlertCollection.h" />
+        <header-file src="src/ios/ESPLibrary/Library/Include/BTDiscovery.h" />	
+        <header-file src="src/ios/ESPLibrary/Library/Include/DeviceInformation.h" />
+        <header-file src="src/ios/ESPLibrary/Library/Include/ESPPacket.h" />
+        <header-file src="src/ios/ESPLibrary/Library/Include/PacketAction.h" />
+        <header-file src="src/ios/ESPLibrary/Library/Include/SavvyStatus.h" />
+        <header-file src="src/ios/ESPLibrary/Library/Include/UserSetupOptions.h" />
+        <header-file src="src/ios/ESPLibrary/Library/Include/AlertData.h" />
+        <header-file src="src/ios/ESPLibrary/Library/Include/CustomSweep.h" />
+        <header-file src="src/ios/ESPLibrary/Library/Include/DisplayAndAudio.h" />
+        <header-file src="src/ios/ESPLibrary/Library/Include/ESPPacketCollection.h" />
+        <header-file src="src/ios/ESPLibrary/Library/Include/PacketTypes.h" />
+        <header-file src="src/ios/ESPLibrary/Library/Include/SendRequest.h" />
+        <header-file src="src/ios/ESPLibrary/Library/Include/ValentineCommunicationService.h" />
+        <header-file src="src/ios/ESPLibrary/Library/Include/AlertOutput.h" />
+        <header-file src="src/ios/ESPLibrary/Library/Include/CustomSweepObject.h" />
+        <header-file src="src/ios/ESPLibrary/Library/Include/DisplayData.h" />
+        <header-file src="src/ios/ESPLibrary/Library/Include/Miscellaneous.h" />			
+        <header-file src="src/ios/ESPLibrary/Library/Include/SavvySpecific.h" />
+        <header-file src="src/ios/ESPLibrary/Library/Include/UserBytes.h" />
+    </platform>
+    
+</plugin>

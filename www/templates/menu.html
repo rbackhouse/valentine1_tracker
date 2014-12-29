@@ -1,0 +1,10 @@
+<div data-role="panel" id="menuPanel" data-position="left" data-display="reveal" data-theme="a">
+    <ul data-role="listview" data-theme="a">
+        <li>
+			<img class="ui-li-icon" style="max-height: 32px; max-width: 32px; top: 3px" id="menuConnectionIcon" <% if (valentine1.isConnected()) { %> src="images/v1connected.png" <% } else { %> src="images/v1disconnected.png"  <% } %> />
+        </li>
+        <% _.each(menuItems, function(menuItem) { %>
+            <li><a href="#<%= menuItem.href %>"><%= menuItem.label %></a></li>
+        <% }); %>
+    </ul>
+</div>
