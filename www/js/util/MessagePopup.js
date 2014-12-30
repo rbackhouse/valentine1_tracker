@@ -1,6 +1,6 @@
 define(['jquery'], function($) {
 	return {
-		create: function(title, msg, html, cb) {
+		create: function(title, msg, html, cb, showCancel) {
 			var $popUp = $("<div/>").popup({
 				dismissible : false,
 				theme : "a",
@@ -32,6 +32,15 @@ define(['jquery'], function($) {
 				if (cb) cb();
 			}).appendTo($popUp);
 			
+			if (showCancel) {
+				$("<a>", {
+					text : "Cancel"
+				}).buttonMarkup({
+					inline : true
+				}).bind("click", function() {
+					$popUp.popup("close");
+				}).appendTo($popUp);
+			}
 			$popUp.popup("open").trigger("create");
 		}
 	}
