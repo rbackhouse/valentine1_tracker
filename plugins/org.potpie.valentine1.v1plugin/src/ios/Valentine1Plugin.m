@@ -125,6 +125,14 @@
     self.infoListenerCommand = nil;
 }
 
+-(void)mute:(CDVInvokedUrlCommand*)command {
+    [[SendRequest new] reqMuteOn];
+}
+
+-(void)unmute:(CDVInvokedUrlCommand*)command {
+    [[SendRequest new] reqMuteOff];
+}
+
 - (void) discoveryConnected:(CBPeripheral *)per {
     NSString* state;
     switch ([per state]) {

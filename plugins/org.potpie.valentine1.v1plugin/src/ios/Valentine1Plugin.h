@@ -41,6 +41,8 @@
 - (void)setOptions:(CDVInvokedUrlCommand*)command;
 - (void)startInfoListener:(CDVInvokedUrlCommand*)command;
 - (void)stopInfoListener:(CDVInvokedUrlCommand*)command;
+- (void)mute:(CDVInvokedUrlCommand*)command;
+- (void)unmute:(CDVInvokedUrlCommand*)command;
 
 @property (strong, nonatomic) CDVInvokedUrlCommand* latestCommand;
 @property (strong, nonatomic) CDVInvokedUrlCommand* alertCommand;

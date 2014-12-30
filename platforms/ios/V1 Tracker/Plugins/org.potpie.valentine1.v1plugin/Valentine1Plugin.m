@@ -46,7 +46,7 @@
 
 - (void)disconnect:(CDVInvokedUrlCommand*)command {
     self.connectionCommand = command;
-
+    
     CBPeripheral *per = [[BTDiscovery sharedInstance] getConnectedV1Device];
     if ( per != nil ){
         [[BTDiscovery sharedInstance] disconnectPeripheral:per];
@@ -90,8 +90,8 @@
     NSString* jsonStr = [command.arguments objectAtIndex:0];
     NSError *e;
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData: [jsonStr dataUsingEncoding:NSUTF8StringEncoding]
-                                    options: NSJSONReadingMutableContainers
-                                    error: &e];
+                                                         options: NSJSONReadingMutableContainers
+                                                           error: &e];
     UserBytes *userBytes = [UserBytes alloc];
     
     [userBytes SetXbandOn:[json valueForKey:@"XbandOn"]];
@@ -113,7 +113,7 @@
     [userBytes SetEuroXBandOn:[json valueForKey:@"EuroXBandOn"]];
     [userBytes SetFilterOn:[json valueForKey:@"FilterOn"]];
     [userBytes SetForceLegacyCD:[json valueForKey:@"ForceLegacyCD"]];
-     
+    
     [[SendRequest new] reqWriteUserBytes:userBytes];
 }
 
@@ -123,6 +123,14 @@
 
 -(void)stopInfoListener:(CDVInvokedUrlCommand*)command {
     self.infoListenerCommand = nil;
+}
+
+-(void)mute:(CDVInvokedUrlCommand*)command {
+    [[SendRequest new] reqMuteOn];
+}
+
+-(void)unmute:(CDVInvokedUrlCommand*)command {
+    [[SendRequest new] reqMuteOff];
 }
 
 - (void) discoveryConnected:(CBPeripheral *)per {
@@ -138,7 +146,7 @@
             state = @"connecting";
             break;
     }
-
+    
     NSDictionary *jsonObj = [[NSDictionary alloc]
                              initWithObjectsAndKeys :
                              [per name], @"name",
@@ -305,9 +313,9 @@
                                  initWithObjectsAndKeys :
                                  [NSNumber numberWithInt:alertCnt], @"alertCnt",
                                  [NSNumber numberWithBool:[collection isComplete]], @"isComplete",
-                               jsonAlerts, @"alerts",
-                               nil];
-                                      
+                                 jsonAlerts, @"alerts",
+                                 nil];
+        
         CDVPluginResult *pluginResult = [CDVPluginResult
                                          resultWithStatus : CDVCommandStatus_OK
                                          messageAsDictionary : jsonObj];

@@ -210,6 +210,28 @@ var valentine1 = {
 	},
 	isConnected: function() {
 		return isConnected;
+	},
+	mute: function() {
+		cordova.exec(
+			function() {
+			},
+			function(err) {
+			},
+			"Valentine1Plugin",
+			"mute",
+			[]
+		);
+	},
+	unmute: function() {
+		cordova.exec(
+			function() {
+			},
+			function(err) {
+			},
+			"Valentine1Plugin",
+			"unmute",
+			[]
+		);
 	}
 }
 
