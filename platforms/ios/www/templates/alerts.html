@@ -5,23 +5,27 @@
 			<a href="#alert/<%= encodeURIComponent(alert._id) %>">
 				<p><b>Time:</b> <i><%= dtFormat(alert._id) %></i></p>
 				<p><b>Band:</b> <span style="color: blue;"><i><%= alert.band %></i></span></p>
-				<p><b>Direction:</b>
-				<% if (alert.direction === "Front") { %>
-					<img style="vertical-align: bottom;" src="images/red_arrow_up-20.jpg"/>
-				<% } else if (alert.direction === "Side") { %>
-					<img style="vertical-align: bottom;" src="images/red_arrow_left-20.jpg"/>
-					<img style="vertical-align: bottom;" src="images/red_arrow_right-20.jpg"/>
-				<% } else { %>
-					<img style="vertical-align: bottom;" src="images/red_arrow_down-20.jpg"/>
+				<% if (valentine1.isConnected()) { %>
+					<p><b>Direction:</b>
+					<% if (alert.direction === "Front") { %>
+						<img style="vertical-align: bottom;" src="images/red_arrow_up-20.jpg"/>
+					<% } else if (alert.direction === "Side") { %>
+						<img style="vertical-align: bottom;" src="images/red_arrow_left-20.jpg"/>
+						<img style="vertical-align: bottom;" src="images/red_arrow_right-20.jpg"/>
+					<% } else { %>
+						<img style="vertical-align: bottom;" src="images/red_arrow_down-20.jpg"/>
+					<% } %>
+					</p>
 				<% } %>
-				</p>
 				<p><b>Frequency:</b> <i><%= alert.frequency %></i></p>
 				<p><b>Range:</b> <i><%= alert.windowLower %> - <%= alert.windowUpper %></i></p>
-				<p><b>Strength:</b>
-				<% for (var i = 0; i < alert.normalizedSignalStregth; i++) { %>
-					<img style="vertical-align: bottom;" src="images/green_dot.png"/>
-				<% } %>	
-				</p>
+				<% if (valentine1.isConnected()) { %>
+					<p><b>Strength:</b>
+					<% for (var i = 0; i < alert.normalizedSignalStregth; i++) { %>
+						<img style="vertical-align: bottom;" src="images/green_dot.png"/>
+					<% } %>	
+					</p>
+				<% } %>
 			</a>
 		</li> 
 	<% }); %>
