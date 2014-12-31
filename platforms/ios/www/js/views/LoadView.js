@@ -16,13 +16,15 @@ function($, Backbone, _, BaseView, AlertsDB, MessagePopup, Logger, config, Q, te
 		events: function() {
 		    return _.extend({}, BaseView.prototype.events, {
 			    "click #clear" : function() {
-			    	AlertsDB.destroyDatabase(function(err, info) {
-			    		if (err) {
-							MessagePopup.create("Clear DB", "Clear DB failed");
-						} else {
-							MessagePopup.create("Clear DB", "Alerts DB has been cleared");
-						}
-			    	});
+					MessagePopup.create("Clear Alerts Database", "Are you sure you want to clear the Alerts Database ?", undefined, function() {
+						AlertsDB.destroyDatabase(function(err, info) {
+							if (err) {
+								MessagePopup.create("Clear Alerts Database", "Clear failed");
+							} else {
+								MessagePopup.create("Clear Alerts Database", "Alerts has been cleared");
+							}
+						});
+					}, true);
 			    },
 			    "click #load" : function() {
 			    	var queryparams = {

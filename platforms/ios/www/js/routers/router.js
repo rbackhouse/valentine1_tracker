@@ -157,13 +157,22 @@ function($, Backbone, _, mobile, DisplayView, ConfigView, AlertView, AlertsView,
 								longitude: position.coords.longitude
 							}] 
 						};
+						var alertModel = new Alert(alert);
+						this.alertList.add(alertModel);
 						AlertsDB.queryByFrequency({windowUpper: alert.windowUpper, windowLower: alert.windowLower, band: alert.band}, function(results) {
 							if (results.rows.length < 1) {
 								AlertsDB.addAlert(alert);
+								alertModel.set("dbid", alert._id);
+							} else {
+								var alertInDB = results.rows[0].value;
+								var model = this.alertList.get(alert._id);
+								model.set("dbid", alertInDB._id);
+								if (alertInDB.muted) {
+									Logger.log(Logger.INFO, "Alert ["+alertInDB.band+", "+alertInDB.frequency+"] is marked to be muted");
+									valentine1.mute();
+								}
 							}
 						});
-						var alertModel = new Alert(alert);
-						this.alertList.add(alertModel);
 						if (this.currentPage && this.currentPage.newAlert) {
 							this.currentPage.newAlert(alertModel);
 						}
@@ -224,6 +233,16 @@ function($, Backbone, _, mobile, DisplayView, ConfigView, AlertView, AlertsView,
 			};
 			
 			valentine1.connect(connectCallback);
+			
+			cordova.plugins.backgroundMode.onactivate = function() {
+				Logger.log(Logger.INFO, "Background mode activated");
+			};
+			cordova.plugins.backgroundMode.ondeactivate = function() {
+				Logger.log(Logger.INFO, "Background mode deactivated");
+			};
+			cordova.plugins.backgroundMode.onfailure = function(errorCode) {
+				Logger.log(Logger.ERROR, "Background mode switch failed : "+errorCode);
+			};
 		},
 		loadDisplayView: function() {
 			this.currentIndex = 4;

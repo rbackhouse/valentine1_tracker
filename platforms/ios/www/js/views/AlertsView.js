@@ -4,9 +4,11 @@ define([
 		'underscore',
 		'./BaseView',
 		'../uiconfig',
+		'../util/MessagePopup',
+		'db/AlertsDB',
 		'text!templates/alerts.html',
 		'text!templates/alertitem.html'], 
-function($, Backbone, _, BaseView, config, template, templateItem) {
+function($, Backbone, _, BaseView, config, MessagePopup, AlertsDB, template, templateItem) {
 	var dtFormat = function(dt) {
 		function pad(val) {
 			val = val + "";
@@ -40,7 +42,12 @@ function($, Backbone, _, BaseView, config, template, templateItem) {
 	var View = BaseView.extend({
 		events: function() {
 		    return _.extend({}, BaseView.prototype.events, {
-		    });	
+				"click #alertlist li" : function(evt) {
+					if (evt.target.id !== "") {
+						this.confirmMuteUnmute(evt.target.id);
+					}
+				}
+		    });
 		},
 		initialize: function(options, router) {
 			this.constructor.__super__.initialize.apply(this, [{
@@ -69,7 +76,33 @@ function($, Backbone, _, BaseView, config, template, templateItem) {
 				$("#alertlist").append(_.template( templateItem) ( {alert: alert.toJSON(), dtFormat: dtFormat} ));
 			});
 			$("#alertlist").listview('refresh');
-		}		
+		},
+		confirmMuteUnmute: function(id) {
+			var alert = this.alerts.get(id);
+			if (alert.get("muted") && alert.get("muted") === true) {
+				MessagePopup.create("Unmute", "Unmute selected alert ?", undefined, function() {
+					alert.set("muted", false);
+					valentine1.unmute();
+					var id = alert.id;
+					if (alert.get("dbid") !== undefined) {
+						id = alert.get("dbid");
+					}
+					AlertsDB.updateAlert(id, alert.toJSON());
+					this.updateAlert(alert);
+				}.bind(this), true);
+			} else {
+				MessagePopup.create("Mute", "Mute selected alert ?", undefined, function() {
+					alert.set("muted", true); 					
+					valentine1.mute();
+					var id = alert.id;
+					if (alert.get("dbid") !== undefined) {
+						id = alert.get("dbid");
+					}
+					AlertsDB.updateAlert(id, alert.toJSON());
+					this.updateAlert(alert);
+				}.bind(this), true);
+			}
+		}
 	});
 	
 	return View;

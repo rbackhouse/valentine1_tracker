@@ -64,10 +64,25 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/de.appplant.cordova.plugin.background-mode/www/background-mode.js",
+        "id": "de.appplant.cordova.plugin.background-mode.BackgroundMode",
+        "clobbers": [
+            "cordova.plugins.backgroundMode",
+            "plugin.backgroundMode"
+        ]
+    },
+    {
         "file": "plugins/plugin.http.request/www/http-request.js",
         "id": "plugin.http.request.phonegap-http-requst",
         "clobbers": [
             "cordova.plugins.http-request"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.device/www/device.js",
+        "id": "org.apache.cordova.device.device",
+        "clobbers": [
+            "device"
         ]
     }
 ];
@@ -80,8 +95,10 @@ module.exports.metadata =
     "nl.x-services.plugins.insomnia": "4.0.1",
     "com.brodysoft.sqlitePlugin": "1.0.3",
     "org.potpie.valentine1.v1plugin": "1.0.0",
+    "de.appplant.cordova.plugin.background-mode": "0.6.2",
     "plugin.http.request": "1.0.0",
-    "com.googlemaps.ios": "1.9.1"
+    "com.googlemaps.ios": "1.9.1",
+    "org.apache.cordova.device": "0.2.14-dev"
 }
 // BOTTOM OF METADATA
 });

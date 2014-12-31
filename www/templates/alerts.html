@@ -27,6 +27,7 @@
 					</p>
 				<% } %>
 			</a>
+            <a id="<%= alert._id %>" class="ui-btn <% if (alert.muted === true) { %> ui-icon-unmute <% } else { %> ui-icon-mute <% } %> ui-btn-icon-notext"></a> 
 		</li> 
 	<% }); %>
     </ul>

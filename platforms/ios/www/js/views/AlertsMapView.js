@@ -31,22 +31,23 @@ function($, Backbone, _, BaseView, AlertsDB, config, template) {
 				var mapdiv = $("#map")[0];
 				this.map = plugin.google.maps.Map.getMap(mapdiv);
 				this.map.addEventListener(plugin.google.maps.event.MAP_READY, function() {
-					var firstlocation = new plugin.google.maps.LatLng(this.pos.coords.latitude, this.pos.coords.longitude);
-					this.map.setCenter(firstlocation);
+					var location = new plugin.google.maps.LatLng(this.pos.coords.latitude, this.pos.coords.longitude);
 					setTimeout(function() {
 						this.map.setZoom(14);
 					}.bind(this), 1000);
 					
 					this.alerts.each(function(alert) {
-						this.placeAlert(alert);
+						location = this.placeAlert(alert);
 					}.bind(this));
+					this.map.setCenter(location);
 				}.bind(this));
 			}.bind(this);
 			setTimeout(f, 1000);
 		},
 		cleanup: function() {
 			if (this.map) {
-				this.map.remove();
+				this.map.clear();
+				this.map.off();
 			}
 		},
 		newAlert: function(alert) {
@@ -66,10 +67,14 @@ function($, Backbone, _, BaseView, AlertsDB, config, template) {
 			var frequency = alert.get("frequency");
 			var strength = highest.strength;
 			var location = new plugin.google.maps.LatLng(pos.latitude, pos.longitude);
-			this.map.addMarker({
+			var markerInfo = {
 				'position': location,
 				'title': "Band: "+ band + "\nFrequency: "+frequency+"\nStrength: "+strength
-			}, function(marker) {
+			};
+			if (alert.get("muted") === true) {
+				markerInfo.icon = "www/images/Marker_Azure.png";
+			}
+			this.map.addMarker(markerInfo, function(marker) {
 				this.markerMap[alert._id] = marker;
 			}.bind(this));
 			return location;

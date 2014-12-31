@@ -50,6 +50,12 @@
         <param name="ios-package" value="Valentine1Plugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
+    </feature>
+    <feature name="BackgroundMode">
+        <param name="ios-package" value="APPBackgroundMode" />
+    </feature>
     <name>V1 Tracker</name>
     <description>
     </description>

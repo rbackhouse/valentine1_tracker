@@ -1,21 +1,17 @@
-.ui-icon-connectIcon:after {
-	background-image: url('../images/link.png');
+.ui-icon-mute:after {
+	background-image: url('../images/muted.png');
 	background-repeat: no-repeat;
-    background-position: 4px 3px;
+    background-position: 5px 3px;
 }
 
-.ui-icon-disconnectIcon:after {
-	background-image: url('../images/unlink.png');
+.ui-icon-unmute:after {
+	background-image: url('../images/unmuted.png');
 	background-repeat: no-repeat;
-    background-position: 4px 3px;
+    background-position: 5px 3px;
 }
 
 .ui-icon-dbIcon:after {
 	background-image: url('../images/files-o.png');
 	background-repeat: no-repeat;
-    background-position: 4px 3px;
-}
-
-.ui-connection-image {
-	background-color: rgba(128, 155, 166, 0.47);
+    background-position: 2px 2px;
 }

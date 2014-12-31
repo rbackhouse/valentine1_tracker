@@ -28,12 +28,12 @@ define(['pouchdb', '../util/Logger'], function(PouchDB, Logger) {
 		updateAlert: function(id, updated) {
 			db.get(id, function(err, doc) {
 				if (err) {
-					Logger.log(Logger.ERROR, "Failed to get alert with id "+id+ " err:"+JSON.stringify(err));
+					Logger.log(Logger.ERROR, "Failed to get alert with id "+id+ " err: "+err.message);
 					return;
 				}
 				db.put(updated, id, doc._rev, function(err, response) {
 					if (err) {
-						Logger.log(Logger.ERROR, "Failed to update alert with id "+id+ " err:"+JSON.stringify(err));
+						Logger.log(Logger.ERROR, "Failed to update alert with id "+id+ " err: "+err.message);
 					}
 				});
 			});

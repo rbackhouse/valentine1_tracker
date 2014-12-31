@@ -81,6 +81,9 @@
 		00410E4A258D4E76AB22FBA0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FA495E6882994E2BA7135F55 /* libsqlite3.dylib */; };
 		9C256A326B1B47E591522B59 /* Valentine1Plugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 987A5AC8D15143E7B8F70967 /* Valentine1Plugin.m */; };
 		CD55FDE267C84A2D9692E43F /* libESPLibrary_1_1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A88107067232409CBD4B8285 /* libESPLibrary_1_1.a */; };
+		89005FAB5C4D4A108224F63F /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B09F146EDD4600B073231F /* CDVDevice.m */; };
+		709DBD54CC8349C4B55A117F /* APPBackgroundMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA45ABF1DD94955A247FDA4 /* APPBackgroundMode.m */; };
+		80A50A4A3DE34F5BAB9D9FC4 /* appbeep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7B57B3C013F143CA86A6E4F5 /* appbeep.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -236,6 +239,11 @@
 		54DAE39A34C64657AA1A3317 /* Miscellaneous.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Miscellaneous.h"; path = "org.potpie.valentine1.v1plugin/Miscellaneous.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		EECA01739F7F4718A8F49550 /* SavvySpecific.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SavvySpecific.h"; path = "org.potpie.valentine1.v1plugin/SavvySpecific.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		CEB56CF4CD1E44308F23A3FA /* UserBytes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UserBytes.h"; path = "org.potpie.valentine1.v1plugin/UserBytes.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		47B09F146EDD4600B073231F /* CDVDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVDevice.m"; path = "org.apache.cordova.device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		F58F98DD8CBF434682855E26 /* CDVDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVDevice.h"; path = "org.apache.cordova.device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		2DA45ABF1DD94955A247FDA4 /* APPBackgroundMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "APPBackgroundMode.m"; path = "de.appplant.cordova.plugin.background-mode/APPBackgroundMode.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		3FA6F44B997945FCB0755F66 /* APPBackgroundMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "APPBackgroundMode.h"; path = "de.appplant.cordova.plugin.background-mode/APPBackgroundMode.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		7B57B3C013F143CA86A6E4F5 /* appbeep.wav */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "appbeep.wav"; path = "appbeep.wav"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,6 +352,7 @@
 				308D05311370CCF300D202BF /* splash */,
 				8D1107310486CEB800E47090 /* V1 Tracker-Info.plist */,
 				F2F246B04CB54A83BA7EB605 /* GoogleMaps.bundle */,
+				7B57B3C013F143CA86A6E4F5 /* appbeep.wav */,
 			);
 			name = Resources;
 			path = "V1 Tracker/Resources";
@@ -463,6 +472,10 @@
 				54DAE39A34C64657AA1A3317 /* Miscellaneous.h */,
 				EECA01739F7F4718A8F49550 /* SavvySpecific.h */,
 				CEB56CF4CD1E44308F23A3FA /* UserBytes.h */,
+				47B09F146EDD4600B073231F /* CDVDevice.m */,
+				F58F98DD8CBF434682855E26 /* CDVDevice.h */,
+				2DA45ABF1DD94955A247FDA4 /* APPBackgroundMode.m */,
+				3FA6F44B997945FCB0755F66 /* APPBackgroundMode.h */,
 			);
 			name = Plugins;
 			path = "V1 Tracker/Plugins";
@@ -627,6 +640,7 @@
 				7E7966E51810823500FA85AD /* icon-76@2x.png in Resources */,
 				30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */,
 				9A4F0C9B2ECF45BEABCFC736 /* GoogleMaps.bundle in Resources */,
+				80A50A4A3DE34F5BAB9D9FC4 /* appbeep.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,6 +700,8 @@
 				E3A56B62CCD5452AB6CF1325 /* Insomnia.m in Sources */,
 				4D48DD818E4A428FA25B6E16 /* SQLitePlugin.m in Sources */,
 				9C256A326B1B47E591522B59 /* Valentine1Plugin.m in Sources */,
+				89005FAB5C4D4A108224F63F /* CDVDevice.m in Sources */,
+				709DBD54CC8349C4B55A117F /* APPBackgroundMode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

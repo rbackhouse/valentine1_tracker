@@ -8,7 +8,8 @@ define(['jquery'], function($) {
 		$.mobile.document.bind('pagehide', function (event, ui) {
     		$(event.target).remove();
   		});
-  		window.plugins.insomnia.keepAwake();
+  		//window.plugins.insomnia.keepAwake();
+  		cordova.plugins.backgroundMode.enable();
 		StatusBar.overlaysWebView(false);
 	});
 });

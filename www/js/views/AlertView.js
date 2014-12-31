@@ -9,6 +9,10 @@ function($, Backbone, _, BaseView, config, template) {
 	var View = BaseView.extend({
 		events: function() {
 		    return _.extend({}, BaseView.prototype.events, {
+				"click #back" : function() {
+					this.cleanup();
+					this.router.navigate("alerts", {trigger: true});
+				}
 		    });	
 		},
 		initialize: function(data, router) {
@@ -55,7 +59,8 @@ function($, Backbone, _, BaseView, config, template) {
 		},
 		cleanup: function() {
 			if (this.map) {
-				this.map.remove();
+				this.map.clear();
+				this.map.off();
 			}
 		}
 	});
